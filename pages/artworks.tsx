@@ -14,6 +14,7 @@ export default function Artworks() {
         <MediaConfiguration
           networkId={process.env.NEXT_PUBLIC_NETWORK as NetworkIDs}
         >
+          <img style={{display:absolute, top: '40px' left: '40px'}} src={process.env.PUBLIC_URL + '/childrensdraw.jpg'} /> 
           <AuctionHouseList
             curatorIds={[process.env.NEXT_PUBLIC_CURATORS_ID as string]}
             onClick={(_, { tokenId }) => {
@@ -21,6 +22,7 @@ export default function Artworks() {
             }}
           />
         </MediaConfiguration>
+        
       </div>
     </>
   );
